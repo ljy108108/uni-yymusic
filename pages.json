@@ -1,0 +1,92 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "YY云音乐"
+			}
+		}
+        ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的音乐",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/friend/friend",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "关注",
+                "enablePullDownRefresh": false
+				
+            }
+            
+        }
+        ,{
+            "path" : "pages/podcast/podcast",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "播客",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/yunCun/yunCun",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "云村",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "YY云音乐",
+		"navigationBarBackgroundColor": "#C20C0C",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+		"color":"#999999",
+		"selectedColor":"#C20C0C",
+		"backgroundColor":"#FFFFFF",
+		"borderStyle":"white",
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"text":"发现",
+				"iconPath":"static/icon/music.png",
+				"selectedIconPath":"static/icon/music-active.png"
+			},
+			{
+				"pagePath":"pages/podcast/podcast",
+				"text":"播客",
+				"iconPath":"static/icon/radio.png",
+				"selectedIconPath":"static/icon/radio-active.png"
+			},
+			{
+				"pagePath":"pages/my/my",
+				"text":"我的",
+				"iconPath":"static/icon/my.png",
+				"selectedIconPath":"static/icon/my-active.png"
+			},
+			{
+				"pagePath":"pages/friend/friend",
+				"text":"关注",
+				"iconPath":"static/icon/friend.png",
+				"selectedIconPath":"static/icon/friend-active.png"
+			},
+			{
+				"pagePath":"pages/yunCun/yunCun",
+				"text":"云村",
+				"iconPath":"static/icon/yuncun.png",
+				"selectedIconPath":"static/icon/yuncun-active.png"
+			}
+			
+		]
+	}
+}
