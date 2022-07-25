@@ -47,8 +47,8 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "YY云音乐",
-		"navigationBarBackgroundColor": "#C20C0C",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarBackgroundColor": "#F7F7F7"
+		// "backgroundColor": "#F8F8F8"
 	},
 	"tabBar":{
 		"color":"#999999",

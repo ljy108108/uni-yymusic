@@ -1,5 +1,5 @@
 const BASE_URL = "https://music.cyrilstudio.top"
-export const  myRequest = (options)=>{
+export const myRequest = (options)=>{
 	return new Promise((resolve,reject)=>{
 		uni.request({
 			url:BASE_URL + options.url,
@@ -14,7 +14,6 @@ export const  myRequest = (options)=>{
 				}
 				//获取成功
 				resolve(res)
-				// console.log('res',res)
 			},
 			fail:(err)=>{
 				uni.showToast({
@@ -25,13 +24,5 @@ export const  myRequest = (options)=>{
 		})
 	})
 }
-
-
-//请求拦截器  
-
-
-
-// 响应拦截器
-
 
 

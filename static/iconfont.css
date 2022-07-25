@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3537670 */
+  src: url('iconfont.woff2?t=1658750718225') format('woff2'),
+       url('iconfont.woff?t=1658750718225') format('woff'),
+       url('iconfont.ttf?t=1658750718225') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-maikefeng-copy:before {
+  content: "\e771";
+}
+
+.icon-plus-copy:before {
+  content: "\e770";
+}
+
+.icon-favoriteslist:before {
+  content: "\e69b";
+}
+
+.icon-radio:before {
+  content: "\e6cd";
+}
+
+.icon--music-copy:before {
+  content: "\e76b";
+}
+
+.icon--music:before {
+  content: "\e666";
+}
+
+.icon-Musicdisc-copy:before {
+  content: "\e76c";
+}
+
+.icon-guanzhu-copy:before {
+  content: "\e76d";
+}
+
+.icon-radioguangbo-copy:before {
+  content: "\e76e";
+}
+
+.icon-netease-cloud-music-line-copy:before {
+  content: "\e76f";
+}
+
+.icon-Musicdisc:before {
+  content: "\e629";
+}
+
+.icon-guanzhu:before {
+  content: "\e6cf";
+}
+
+.icon-netease-cloud-music-line:before {
+  content: "\e76a";
+}
+
+.icon-yinle:before {
+  content: "\e63b";
+}
+
+.icon-radioguangbo:before {
+  content: "\e6de";
+}
+
