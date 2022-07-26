@@ -4,7 +4,8 @@
 			<view class="iconfont icon-favoriteslist">
 			</view>
 			<view class="top_search">
-				<text class="iconfont icon-favoriteslist"></text>恋爱告急，最近很火哟~
+				<text class="iconfont icon-search"></text>
+				<text>恋爱告急，最近很火哟~</text>
 			</view>
 			<view class="iconfont icon-maikefeng-copy">
 			</view>
@@ -17,13 +18,35 @@
 			</swiper-item>
 		</swiper>
 		<!-- 导航 -->
-		<scroll-view class="nav" scroll-X="true" >
+		<scroll-view class="nav" scroll-x >
 			<view class="nav-item" v-for="(nav,index) in navs" :key="index">
 				<view :class="nav.iconfont">
 				</view>
 				<text>{{nav.text}}</text>
 			</view>
 		</scroll-view>
+		<!-- 推荐歌单 -->
+		<view class="recommend">
+			<view class="recommend-top">
+				<text>推荐歌单</text>
+				<text class="more">更多></text>
+			</view>
+			<scroll-view scroll-x >
+				<view class="recommend-item"  v-for="(nav,index) in navs" :key="index">
+					<view>
+						<image src="../../static/icon/friend-active.png" mode=""></image>
+					</view>
+					<text>{{nav.text}}</text>
+				</view>
+				<view class="recommend-item"  v-for="(nav,index) in navs" :key="index">
+					<view>
+						<image src="../../static/icon/friend-active.png" mode=""></image>
+					</view>
+					<text>{{nav.text}}</text>
+				</view>
+			</scroll-view>
+		</view>
+		
 	</view>
 </template>
 
@@ -115,7 +138,8 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		background-color: #f5f5f5;
+		// background-color: #f5f5f5;
+		background-color: #fcfcfc;
 		.top{
 			width: 710rpx;
 			display: flex;
@@ -134,8 +158,14 @@
 				line-height: 60rpx;
 				border-radius: 60rpx;
 				background-color: #fff;
-				font-size: 26rpx;
 				color: #888;
+				text{
+					font-size: 30rpx;
+					padding-left: 10rpx;
+				}
+				.icon-search{
+					font-size: 38rpx;
+				}
 			}
 		}
 		swiper{
@@ -153,13 +183,59 @@
 			}
 		}
 		.nav {
-			// display: flex;
-			width: 710rpx;
+			// width: 710rpx;
+			width: 100%;
 			margin: 30rpx 0;
+			height: 130rpx;
+			white-space: nowrap;//不换行
+			padding-bottom: 20rpx;
+			border-bottom: 2rpx solid #ededed;
+			::-webkit-scrollbar {
+			  width: 0;
+			  height: 0;
+			  color: transparent;
+			}
 			.nav-item{
 				width: 20%;
-				display: inline;
+				display: inline-block;
+				text-align: center;
+				view{
+					width: 80rpx;
+					height: 80rpx;
+					line-height: 80rpx;
+					background-color: #ffe0c1;
+					border-radius: 50%;
+					font-size: 50rpx;
+					margin: 0rpx auto;
+					color: $music-color;
+				}
+				text{
+					font-size: 24rpx;
+					color: #888;
+				}
 			}
+		}
+		.recommend{
+			width: 710rpx;
+			margin: 20rpx 0;
+			.recommend-top{
+				display: flex;
+				justify-content: space-between;
+				text{
+					font-size: 34rpx;
+					
+				}
+				.more{
+					font-size: 18rpx;
+					width: 80rpx;
+					text-align: center;
+					height: 40rpx;
+					line-height: 40rpx;
+					border-radius: 25%;
+					border: 3rpx solid #ddd;
+				}
+			}
+			
 		}
 	}
 
