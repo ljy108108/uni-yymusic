@@ -6,4 +6,7 @@ export const reqGetBanners = ()=> myRequest({
 	url:'/banner'
 })
 
-// 
+// 首页推荐歌单
+export const reqRecommendList = ()=>myRequest({
+	url:'/personalized?limit=6'
+})

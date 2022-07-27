@@ -32,17 +32,11 @@
 				<text class="more">更多></text>
 			</view>
 			<scroll-view scroll-x >
-				<view class="recommend-item"  v-for="(nav,index) in navs" :key="index">
+				<view class="recommend-item" v-for="item  in recommendList" :key="item.id">
 					<view>
-						<image src="../../static/icon/friend-active.png" mode=""></image>
+						<image :src="item.picUrl" mode=""></image>
 					</view>
-					<text>{{nav.text}}</text>
-				</view>
-				<view class="recommend-item"  v-for="(nav,index) in navs" :key="index">
-					<view>
-						<image src="../../static/icon/friend-active.png" mode=""></image>
-					</view>
-					<text>{{nav.text}}</text>
+					<text>{{item.name}}</text>
 				</view>
 			</scroll-view>
 		</view>
@@ -108,14 +102,17 @@
 		},
 		onLoad() {
 			this.$store.dispatch('getBanners')
-			console.log(this)
+			// console.log(this)
+			//获取 推荐歌单
+			this.$store.dispatch('getRecommendList')
 			//获取热歌榜
 			// this.getHotPlaylist()
 		},
 		computed:{
-			
+			//轮播图
 			...mapState({
-				banners:state=> state.home.banners
+				banners:state=> state.home.banners,
+				recommendList:state=> state.home.recommendList
 			})
 		},
 		methods: {
@@ -138,6 +135,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		font-size: 24rpx;
 		// background-color: #f5f5f5;
 		background-color: #fcfcfc;
 		.top{
@@ -216,23 +214,56 @@
 			}
 		}
 		.recommend{
-			width: 710rpx;
+			width: 100%;
 			margin: 20rpx 0;
 			.recommend-top{
 				display: flex;
 				justify-content: space-between;
+				padding: 0 20rpx;
 				text{
 					font-size: 34rpx;
-					
 				}
 				.more{
 					font-size: 18rpx;
-					width: 80rpx;
+					width: 100rpx;
 					text-align: center;
 					height: 40rpx;
 					line-height: 40rpx;
-					border-radius: 25%;
+					border-radius: 30%;
 					border: 3rpx solid #ddd;
+				}
+			}
+			scroll-view{
+				width: 100%;
+				height: auto;
+				white-space: nowrap;
+				margin: 20rpx 0;
+				.recommend-item{
+					width: 25%;
+					display: inline-block;
+					text-align: center;
+					padding: 0 10rpx;
+					view{
+						height: 180rpx;
+						margin: 0 0 10rpx;
+						image{
+							width: 180rpx;
+							height: 180rpx;
+							border-radius: 20rpx;
+						}
+					}
+					text{
+						white-space: pre-wrap;
+						display: -webkit-box;
+						text-align: left;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						-webkit-line-clamp: 2;
+						line-clamp: 2;
+						-webkit-box-orient: vertical;
+						padding: 0 5rpx;
+					}
+					
 				}
 			}
 			
